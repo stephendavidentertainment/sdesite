@@ -12,27 +12,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const images = [
         {
             src: "https://stephendavidentertainment.github.io/sdesite/images/landing/WyattEarpCowboyWar.jpg",
-            alt: "Wyatt Earp & The Cowboy War"
+            alt: "Wyatt Earp & The Cowboy War hero image"
+        },
+        {
+            src: "https://stephendavidentertainment.github.io/sdesite/images/landing/mwba_hero.png",
+            alt: "The Men Who Built America hero image"
+        },
+        {
+            src: "https://stephendavidentertainment.github.io/sdesite/images/landing/SonsOfLiberty.jpg",
+            alt: "Sons of Liberty hero image"
         },
         {
             src: "https://stephendavidentertainment.github.io/sdesite/images/landing/banner.jpg",
-            alt: "Roman Empire hero shot"
+            alt: "Roman Empire hero image"
         },
         {
-            src: "https://stephendavidentertainment.github.io/website/assets/images/men_who_built_america.jpg",
-            alt: "The Men Who Built America"
-        },
-        {
-            src: "https://stephendavidentertainment.github.io/website/assets/images/sons_of_liberty.jpg",
-            alt: "Sons of Liberty"
-        },
-        {
-            src: "https://stephendavidentertainment.github.io/website/assets/images/roman_empire.jpg",
-            alt: "Roman Empire"
-        },
-        {
-            src: "https://stephendavidentertainment.github.io/website/assets/images/world_wars.jpg",
-            alt: "The World Wars"
+            src: "https://stephendavidentertainment.github.io/sdesite/images/landing/WorldWars.jpg",
+            alt: "The World Wars hero image"
         }
     ];
 
