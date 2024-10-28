@@ -6165,4 +6165,9 @@ body.is-preload .items.onload-fade-in > * > .inner {
 .landing-title h1 {
   letter-spacing: 0.01em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.work-logo-netflix {
+  max-width: 100px;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=main.css.map */
