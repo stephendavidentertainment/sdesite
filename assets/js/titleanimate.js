@@ -1,184 +1,40 @@
 /**
- * Initializes the slider functionality when the DOM content is fully loaded.
- * Registers the GSAP CustomEase plugin and creates a custom ease animation.
- * Sets up event listeners for slide navigation and updates the slider state.
- * 
- * @file /Users/randycounsman/Git/website/script.js
- * @requires gsap
- * @requires CustomEase
- */
-// document.addEventListener("DOMContentLoaded", () => {
-//     gsap.registerPlugin(CustomEase);
-//     CustomEase.create(
-//       "hop",
-//       "M0,0 C0.071,0.505 0.192,0.726 0.318,0.852 0.45,0.984 0.504,1 1,1"
-//     );
-  
-//     const sliderImages = document.querySelector(".slider-images");
-//     const counter = document.querySelector(".counter");
-//     const titles = document.querySelector(".slider-title-wrapper");
-//     const indicators = document.querySelectorAll(".slider-indicators p");
-//     const prevSlides = document.querySelectorAll(".slider-preview .preview");
-//     const slidePreview = document.querySelector(".slider-preview");
-  
-//     let currentImg = 1;
-//     const totalSlides = 5;
-//     let indicatorRotation = 0;
-  
-    
-//     function updateCounterAndTitlePosition() {
-//       const counterY = -20 * (currentImg - 1);
-//       const titleY = -60 * (currentImg - 1);
-  
-//       gsap.to(counter, {
-//         y: counterY,
-//         duration: 1,
-//         ease: "hop",
-//       });
-  
-//       gsap.to(titles, {
-//         y: titleY,
-//         duration: 1,
-//         ease: "hop",
-//       });
-//     }
-  
-//     /**
-//      * Updates the active slide preview by removing the "active" class from all previous slides
-//      * and adding the "active" class to the current slide.
-//      *
-//      * @function
-//      */
-//     function updateActiveSlidePreview() {
-//       prevSlides.forEach((prev) => prev.classList.remove("active"));
-//       prevSlides[currentImg - 1].classList.add("active");
-//     }
-  
-//     /**
-//      * Animates the slide transition in the specified direction.
-//      *
-//      * @param {string} direction - The direction of the slide animation. Can be "left" or "right".
-//      */
-//     function animateSlide(direction) {
-//       const currentSlide =
-//         document.querySelectorAll(".img")[
-//           document.querySelectorAll(".img").length - 1
-//         ];
-  
-//       const slideImg = document.createElement("div");
-//       slideImg.classList.add("img");
-  
-//       const slideImgElem = document.createElement("img");
-//       slideImgElem.src = `./images/portfolio-${currentImg}.jpg`;
-//       gsap.set(slideImgElem, { x: direction === "left" ? -500 : 500 });
-  
-//       slideImg.appendChild(slideImgElem);
-//       sliderImages.appendChild(slideImg);
-  
-//       gsap.to(currentSlide.querySelector("img"), {
-//         x: direction === "left" ? 500 : -500,
-//         duration: 1.5,
-//         ease: "hop",
-//       });
-  
-//       gsap.fromTo(
-//         slideImg,
-//         {
-//           clipPath:
-//             direction === "left"
-//               ? "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
-//               : "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
-//         },
-//         {
-//           clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-//           duration: 1.5,
-//           ease: "hop",
-//         }
-//       );
-//       gsap.to(slideImgElem, {
-//         x: 0,
-//         duration: 1.5,
-//         ease: "hop",
-//       });
-  
-//       cleanupSlides();
-  
-//       indicatorRotation += direction === "left" ? -90 : 90;
-//       gsap.to(indicators, {
-//         rotate: indicatorRotation,
-//         duration: 1,
-//         ease: "hop",
-//       });
-//     }
-  
-//     document.addEventListener("click", (event) => {
-//       const sliderWidth = document.querySelector(".slider").clientWidth;
-//       const clickPosition = event.clientX;
-  
-//       if (slidePreview.contains(event.target)) {
-//         const clickedPrev = event.target.closest(".preview");
-  
-//         if (clickedPrev) {
-//           const clickedIndex = Array.from(prevSlides).indexOf(clickedPrev) + 1;
-  
-//           if (clickedIndex !== currentImg) {
-//             if (clickedIndex < currentImg) {
-//               currentImg = clickedIndex;
-//               animateSlide("left");
-//             } else {
-//               currentImg = clickedIndex;
-//               animateSlide("right");
-//             }
-//             updateActiveSlidePreview();
-//             updateCounterAndTitlePosition();
-//           }
-//         }
-//         return;
-//       }
-  
-//       if (clickPosition < sliderWidth / 2 && currentImg !== 1) {
-//         currentImg--;
-//         animateSlide("left");
-//       } else if (clickPosition > sliderWidth / 2 && currentImg !== totalSlides) {
-//         currentImg++;
-//         animateSlide("right");
-//       }
-  
-//       updateActiveSlidePreview();
-//       updateCounterAndTitlePosition();
-//     });
-  
-//     /**
-//      * Removes the first image element from the slider if the total number of image elements exceeds the allowed total slides.
-//      * 
-//      * @function
-//      */
-//     function cleanupSlides() {
-//       const imgElements = document.querySelectorAll(".slider-images .img");
-//       if (imgElements.length > totalSlides) {
-//         imgElements[0].remove();
-//       }
-//     }
-//   });
-
-// 
-//   NEW VERSION
-// 
-/**
- * @file /Users/randycounsman/Git/website/script.js
  * @requires gsap
  * @requires CustomEase
  */
 document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(CustomEase);
-    CustomEase.create(
-      "hop",
-      "M0,0 C0.071,0.505 0.192,0.726 0.318,0.852 0.45,0.984 0.504,1 1,1"
-    );
-
     const titlesWrapper = document.querySelector(".slider-title-wrapper");
     const titles = titlesWrapper.querySelectorAll("h1");
+    const heroImage = document.querySelector(".hero-image img");
     let currentTitleIndex = 0;
+
+    // Array of image URLs and alt texts corresponding to each title
+    const images = [
+        {
+            src: "https://stephendavidentertainment.github.io/sdesite/images/landing/WyattEarpCowboyWar.jpg",
+            alt: "Wyatt Earp & The Cowboy War"
+        },
+        {
+            src: "https://stephendavidentertainment.github.io/sdesite/images/landing/banner.jpg",
+            alt: "Roman Empire hero shot"
+        },
+        {
+            src: "https://stephendavidentertainment.github.io/website/assets/images/men_who_built_america.jpg",
+            alt: "The Men Who Built America"
+        },
+        {
+            src: "https://stephendavidentertainment.github.io/website/assets/images/sons_of_liberty.jpg",
+            alt: "Sons of Liberty"
+        },
+        {
+            src: "https://stephendavidentertainment.github.io/website/assets/images/roman_empire.jpg",
+            alt: "Roman Empire"
+        },
+        {
+            src: "https://stephendavidentertainment.github.io/website/assets/images/world_wars.jpg",
+            alt: "The World Wars"
+        }
+    ];
 
     // Initially hide all titles except the first one
     titles.forEach((title, index) => {
@@ -194,21 +50,25 @@ document.addEventListener("DOMContentLoaded", () => {
         const nextTitleIndex = (currentTitleIndex + 1) % titles.length;
         const nextTitle = titles[nextTitleIndex];
 
-        // Animate out the current title
-        gsap.to(currentTitle, {
+        // Animate out the current title and hero image
+        gsap.to([currentTitle, heroImage], {
             opacity: 0,
             duration: 1,
-            ease: "hop",
+            ease: "power4.out",
             onComplete: () => {
                 currentTitle.style.display = "none";
                 currentTitle.classList.remove("active");
 
-                // Animate in the next title
+                // Update the hero image and alt text
+                heroImage.src = images[nextTitleIndex].src;
+                heroImage.alt = images[nextTitleIndex].alt;
+
+                // Animate in the next title and hero image
                 nextTitle.style.display = "block";
-                gsap.fromTo(nextTitle, { opacity: 0 }, {
+                gsap.fromTo([nextTitle, heroImage], { opacity: 0 }, {
                     opacity: 1,
                     duration: 1,
-                    ease: "hop",
+                    ease: "power4.out",
                     onComplete: () => {
                         nextTitle.classList.add("active");
                         currentTitleIndex = nextTitleIndex;
