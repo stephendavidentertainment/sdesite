@@ -14,15 +14,15 @@
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 				<!-- One - Landing -->
-					<section class="banner onload-image-fade-in onload-content-fade-right style5 image-position-center invert fullscreen content-align-center">
+					<section  id="latest" class="banner onload-image-fade-in onload-content-fade-right style5 image-position-center invert fullscreen content-align-center">
 						<div class="content">
 							<a href="#first" class="smooth-scroll-middle">
 								<img id="logo" style="max-width: 300px;" src="https://stephendavidentertainment.github.io/website/assets/logos/SDE_logo.svg" alt="Stephen David Entertainment Logo">
 							</a>
 							<p class="landing-subtitle">The Emmy Award-Winning Company That Brought You</p>
 							<div class="slider-title-wrapper landing-title">
-								<h1 class="major title-animate">Wyatt Earp & The Cowboy War</h1>
-								<h1 class="major title-animate active">The Men Who Built America</h1>
+								<h1 class="major title-animate active">Wyatt Earp & The Cowboy War</h1>
+								<h1 class="major title-animate">The Men Who Built America</h1>
 								<h1 class="major title-animate">Sons of Liberty</h1>
 								<h1 class="major title-animate">Roman Empire</h1>
 								<h1 class="major title-animate">The World Wars</h1>
@@ -30,16 +30,12 @@
 						</div>
 						
 						<div class="image">
-							<img src="https://stephendavidentertainment.github.io/sdesite/images/banner.jpg" alt="" />
-							<!-- <video id="video-background" autoplay muted loop playsinline>
-								<source src="https://stephendavidentertainment.github.io/website/assets/videos/Wyatt_Earp_and_The_Cowboy_War_Netflix_Trailer_cutdown.webm" type="video/webm">
-								Your browser does not support the video tag.
-							</video> -->
+							<img src="https://stephendavidentertainment.github.io/sdesite/images/banner.jpg" alt="Roman Empire hero shot" />
 						</div>
 					</section>
 
 				<!-- Two - Our Story 1 -->
-					<section class="spotlight style4 orient-left content-align-left image-position-center onscroll-image-fade-in invert" id="first">
+					<section id="about" class="spotlight style4 orient-left content-align-left image-position-center onscroll-image-fade-in invert" id="first">
 						<div class="content">
 							<!-- <h2>Who is Stephen David?</h2> -->
 							<a href="#first" class="smooth-scroll-middle">
@@ -84,7 +80,7 @@
 					</section>
 
 				<!-- Five - Portfolio -->
-					<section class="wrapper style1 align-left invert">
+					<section id="work" class="wrapper style1 align-left invert">
 						<div class="inner">
 							<h2>Our Work</h2>
 							<p style="max-width: 600px;">For the past fifteen years, Stephen David Entertainment has produced popular and crtically-acclaimed scripted and unscripted content for the industry's top streaming and cable networks.</p>
@@ -279,7 +275,7 @@
 					</section>
 
 				<!-- Six: Contact -->
-					<section class="wrapper style1 align-center invert">
+					<section id="contact" class="wrapper style1 align-center invert">
 						<div class="inner medium">
 							<h2>Representation</h2>
 							<a href="https://www.caa.com/" target="_blank">
@@ -325,6 +321,53 @@
 
 			</div>
 
+		<!-- Navigation -->
+		<nav>
+			<!-- <div class="info">
+				<p>Stephen David</p>
+			</div> -->
+			<!-- <div class="logo">
+				<p><a href="#">Logo</a></p>
+			</div> -->
+			<div class="toggle-btn">
+				<button
+				class="burger"
+				onclick="this.classList.toggle('active');"
+				></button>
+			</div>
+		</nav>
+		<!-- Menu Overlay -->
+		<div class="overlay">
+			<div class="overlay-menu">
+				<div class="menu-item">
+					<div class="menu-item-name">
+						<p id="active"><a href="#latest">Latest</a></p>
+					</div>
+				</div>
+				<div class="menu-item">
+					<div class="menu-item-name">
+						<p><a href="#about">About</a></p>
+					</div>
+				</div>
+				<div class="menu-item">
+					<div class="menu-item-name">
+						<p><a href="#work">Work</a></p>
+					</div>
+				</div>
+				<div class="menu-item">
+					<div class="menu-item-name">
+						<p><a href="#contact">Contact</a></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="sub-nav">
+				<p><a href="https://x.com/stephendavident"><img src="https://stephendavidentertainment.github.io/website/assets/logos/social/twitterx.svg" alt="Twitter X"></a></p>
+				<p><a href="https://www.facebook.com/StephenDavidEntertainment/"><img src="https://stephendavidentertainment.github.io/website/assets/logos/social/facebook.svg" alt="Facebook"></a></p>
+				<p><a href="https://www.instagram.com/stephendavidentertainment/"><img src="https://stephendavidentertainment.github.io/website/assets/logos/social/instagram.svg" alt="Instagram"></a></p>
+			</div> -->
+		</div>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -333,10 +376,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		<!-- Added by Randy -->
+			<!-- Added by Randy -->
+			<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script> -->
+			<script src="https://unpkg.com/gsap@3/dist/CSSRulePlugin.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
 			<script src="assets/js/titleanimate.js"></script>
+			<script src="assets/js/menu.js"></script>
 
 	</body>
 </html>
