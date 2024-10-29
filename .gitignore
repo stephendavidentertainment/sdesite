@@ -23,5 +23,6 @@ assets/sass/
 webfonts/
 images/gallery
 .DS_Store
+*/.DS_Store
 
 images/shows/titlecards/videos/

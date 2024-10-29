@@ -1,34 +1,41 @@
-/**
- * @requires gsap
- * @requires CustomEase
- */
 document.addEventListener("DOMContentLoaded", () => {
     const titlesWrapper = document.querySelector(".slider-title-wrapper");
     const titles = titlesWrapper.querySelectorAll("h1");
     const heroImage = document.querySelector(".hero-image img");
+    const laurelsImage = document.querySelector("#laurels");
     let currentTitleIndex = 0;
 
-    // Array of image URLs and alt texts corresponding to each title
-    const images = [
+    // Array of image URLs, alt texts, and laurels images corresponding to each title
+    const slides = [
         {
-            src: "https://stephendavidentertainment.github.io/sdesite/images/landing/WyattEarpCowboyWar.jpg",
-            alt: "Wyatt Earp & The Cowboy War hero image"
+            title: "Wyatt Earp & The Cowboy War",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WyattEarpCowboyWar.jpg",
+            heroAlt: "Wyatt Earp hero image",
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/MWBA-Laurels.png"
         },
         {
-            src: "https://stephendavidentertainment.github.io/sdesite/images/landing/mwba_hero.png",
-            alt: "The Men Who Built America hero image"
+            title: "The Men Who Built America",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/mwba_hero.png",
+            heroAlt: "The Men Who Built America",
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/MWBA-Laurels.png"
         },
         {
-            src: "https://stephendavidentertainment.github.io/sdesite/images/landing/SonsOfLiberty.jpg",
-            alt: "Sons of Liberty hero image"
+            title: "Sons of Liberty",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/SonsOfLiberty.jpg",
+            heroAlt: "Sons of Liberty",
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/SOL-Laurels.png"
         },
         {
-            src: "https://stephendavidentertainment.github.io/sdesite/images/landing/banner.jpg",
-            alt: "Roman Empire hero image"
+            title: "Roman Empire",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/banner.jpg",
+            heroAlt: "Roman Empire",
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/RE-Laurels.png"
         },
         {
-            src: "https://stephendavidentertainment.github.io/sdesite/images/landing/WorldWars.jpg",
-            alt: "The World Wars hero image"
+            title: "The World Wars",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WorldWars.jpg",
+            heroAlt: "The World Wars",
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/WW-Laurels.png"
         }
     ];
 
@@ -41,13 +48,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    function updateTitle() {
+    function updateSlide() {
         const currentTitle = titles[currentTitleIndex];
         const nextTitleIndex = (currentTitleIndex + 1) % titles.length;
         const nextTitle = titles[nextTitleIndex];
+        const nextSlide = slides[nextTitleIndex];
 
-        // Animate out the current title and hero image
-        gsap.to([currentTitle, heroImage], {
+        // Animate out the current title, hero image, and laurels image
+        gsap.to([currentTitle, heroImage, laurelsImage], {
             opacity: 0,
             duration: 1,
             ease: "power4.out",
@@ -55,13 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 currentTitle.style.display = "none";
                 currentTitle.classList.remove("active");
 
-                // Update the hero image and alt text
-                heroImage.src = images[nextTitleIndex].src;
-                heroImage.alt = images[nextTitleIndex].alt;
+                // Update the hero image, alt text, and laurels image
+                heroImage.src = nextSlide.heroSrc;
+                heroImage.alt = nextSlide.heroAlt;
+                laurelsImage.src = nextSlide.laurelsSrc;
 
-                // Animate in the next title and hero image
+                // Update the next title text
+                nextTitle.textContent = nextSlide.title;
+
+                // Animate in the next title, hero image, and laurels image
                 nextTitle.style.display = "block";
-                gsap.fromTo([nextTitle, heroImage], { opacity: 0 }, {
+                gsap.fromTo([nextTitle, heroImage, laurelsImage], { opacity: 0 }, {
                     opacity: 1,
                     duration: 1,
                     ease: "power4.out",
@@ -74,6 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Call updateTitle every 3 seconds
-    setInterval(updateTitle, 3000);
+    // Call updateSlide every 5 seconds
+    setInterval(updateSlide, 5000);
 });
