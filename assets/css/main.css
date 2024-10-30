@@ -6150,14 +6150,17 @@ body.is-preload .items.onload-fade-in > * > .inner {
   box-shadow: none !important;
 }
 
+.landing {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+}
+
 .landing-subtitle {
-  margin-bottom: 0;
-  margin-top: 2em;
   font-size: x-large;
   text-transform: uppercase;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   line-height: 1.2;
-  /* Fonts */
 }
 
 .landing-title {
@@ -6173,23 +6176,14 @@ body.is-preload .items.onload-fade-in > * > .inner {
   margin-bottom: 10px;
 }
 
-#sde-logo {
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 300px;
-}
-
 nav {
   position: fixed;
-  top: 0; /* Ensure the nav stays at the top of the viewport */
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5em 2em;
-  /* color: #cdc6be; */
   mix-blend-mode: difference;
 }
 
@@ -6253,7 +6247,6 @@ nav > div {
   height: 100vh;
   display: flex;
   background: black;
-  /* background: var(--near-black); */
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   will-change: transform;
@@ -6312,18 +6305,15 @@ nav > div {
   text-decoration: none;
 }
 
-.sub-nav {
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.5em;
-  opacity: 0;
+#latest {
+  position: relative; /* Ensure the parent element is positioned relatively */
 }
 
-.sub-nav p {
-  font-family: "Canopee";
-  font-size: 20px;
-  color: #cdc6be;
+#logo {
+  width: clamp(200px, 20vw, 600px); /* Maintain responsive width */
+}
+
+#laurels {
+  width: clamp(200px, 60vw, 800px); /* Maintain responsive width */
+  margin-top: 20px;
 }/*# sourceMappingURL=main.css.map */
