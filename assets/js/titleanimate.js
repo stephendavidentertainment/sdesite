@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const slides = [
         {
             title: "Wyatt Earp & The Cowboy War",
-            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/Wyatt_Landing_01.webp",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/Wyatt_Landing_02.webp",
             heroAlt: "Wyatt Earp hero image",
             laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Wyatt_Quotes.webp"
         },
