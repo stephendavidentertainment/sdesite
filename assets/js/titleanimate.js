@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             title: "The Men Who Built America",
-            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/mwba_hero.png",
+            // heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/mwba-header.jpg",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/Elephant-back.jpg",
             heroAlt: "The Men Who Built America",
             laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/MWBA_Laurels.webp"
         },
@@ -27,13 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             title: "Roman Empire",
+            // heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/Rome_106_S6A3084-1.jpg",
             heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/RomanEmpire.jpg",
             heroAlt: "Roman Empire",
             laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Roman_Quotes.webp"
         },
         {
             title: "The World Wars",
-            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WorldWars.jpg",
+            // heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WorldWars.jpg",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WorldWars2.jpg",
             heroAlt: "The World Wars",
             laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/WorldWars_Laurels.webp"
         }
