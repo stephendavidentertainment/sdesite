@@ -6156,6 +6156,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
   font-size: x-large;
   text-transform: uppercase;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
   /* Fonts */
 }
 
@@ -6170,6 +6171,14 @@ body.is-preload .items.onload-fade-in > * > .inner {
 .work-logo-netflix {
   max-width: 100px;
   margin-bottom: 10px;
+}
+
+#sde-logo {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 300px;
 }
 
 nav {

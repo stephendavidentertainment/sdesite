@@ -31,12 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
         delay: 0.5
     }, "<");
 
-    timeline.to(".sub-nav", {
-        bottom: "5%",
-        opacity: 1,
-        duration: 0.5,
-        delay: 0.5
-    }, "<");
+    // timeline.to(".sub-nav", {
+    //     bottom: "5%",
+    //     opacity: 1,
+    //     duration: 0.5,
+    //     delay: 0.5
+    // }, "<");
 
     toggleButton.addEventListener("click", function () {
         if (isOpen) {
