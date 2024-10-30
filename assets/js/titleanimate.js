@@ -11,31 +11,31 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Wyatt Earp & The Cowboy War",
             heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WyattEarpCowboyWar.jpg",
             heroAlt: "Wyatt Earp hero image",
-            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/MWBA-Laurels.png"
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Wyatt_Quotes.webp"
         },
         {
             title: "The Men Who Built America",
             heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/mwba_hero.png",
             heroAlt: "The Men Who Built America",
-            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/MWBA-Laurels.png"
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/MWBA_Laurels.webp"
         },
         {
             title: "Sons of Liberty",
             heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/SonsOfLiberty.jpg",
             heroAlt: "Sons of Liberty",
-            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/SOL-Laurels.png"
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Sons_Qoutes.webp"
         },
         {
             title: "Roman Empire",
             heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/banner.jpg",
             heroAlt: "Roman Empire",
-            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/RE-Laurels.png"
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Roman_Qoutes.webp"
         },
         {
             title: "The World Wars",
             heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WorldWars.jpg",
             heroAlt: "The World Wars",
-            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/WW-Laurels.png"
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/WorldWars_Laurels.webp"
         }
     ];
 
