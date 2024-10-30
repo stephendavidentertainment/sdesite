@@ -19,7 +19,6 @@ Gemfile.lock
 
 # 
 assets/js/demo.js
-assets/sass/
 webfonts/
 .DS_Store
 */.DS_Store
