@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const slides = [
         {
             title: "Wyatt Earp & The Cowboy War",
-            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WyattEarpCowboyWar.jpg",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/Wyatt_Landing_01.webp",
             heroAlt: "Wyatt Earp hero image",
             laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Wyatt_Quotes.webp"
         },
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             title: "Sons of Liberty",
-            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/SonsOfLiberty.jpg",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/shows/fulls/screenshots/SonsOfLiberty.webp",
             heroAlt: "Sons of Liberty",
             laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Sons_Quotes.webp"
         },
