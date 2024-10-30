@@ -23,13 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Sons of Liberty",
             heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/SonsOfLiberty.jpg",
             heroAlt: "Sons of Liberty",
-            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Sons_Qoutes.webp"
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Sons_Quotes.webp"
         },
         {
             title: "Roman Empire",
             heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/banner.jpg",
             heroAlt: "Roman Empire",
-            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Roman_Qoutes.webp"
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Roman_Quotes.webp"
         },
         {
             title: "The World Wars",
