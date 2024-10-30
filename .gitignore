@@ -21,7 +21,6 @@ Gemfile.lock
 assets/js/demo.js
 assets/sass/
 webfonts/
-images/gallery
 .DS_Store
 */.DS_Store
 
