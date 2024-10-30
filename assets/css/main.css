@@ -6314,6 +6314,6 @@ nav > div {
 }
 
 #laurels {
-  width: clamp(200px, 60vw, 800px); /* Maintain responsive width */
+  width: clamp(360px, 60vw, 800px); /* Maintain responsive width */
   margin-top: 20px;
 }/*# sourceMappingURL=main.css.map */
