@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             title: "Roman Empire",
-            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/banner.jpg",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/RomanEmpire.jpg",
             heroAlt: "Roman Empire",
             laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Roman_Quotes.webp"
         },
