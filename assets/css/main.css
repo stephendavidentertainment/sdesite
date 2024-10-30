@@ -6157,7 +6157,8 @@ body.is-preload .items.onload-fade-in > * > .inner {
 }
 
 .landing-subtitle {
-  font-size: x-large;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   line-height: 1.2;
