@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "The Titans That Built America",
             heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/TitansNew2.png",
             heroAlt: "The Titans That Built America",
-            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Titans_Laurels.png"
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Titans_Laurels2.webp"
         },
         {
             title: "The Men Who Built America",
