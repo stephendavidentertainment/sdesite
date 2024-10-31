@@ -47,8 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             title: "The World Wars",
-            // heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WorldWars.jpg",
-            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WorldWars2.jpg",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/portfolio-6.jpg",
             heroAlt: "The World Wars",
             laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/WorldWars_Laurels.webp"
         }
