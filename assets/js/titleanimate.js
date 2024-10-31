@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Jonestown: Terror in the Jungle",
             heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/jonestown.jpg",
             heroAlt: "Jonestown: Terror in the Jungle",
-            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/MWBA_Laurels.webp"
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Jonestown_Quotes.webp"
         },
         {
             title: "The World Wars",
