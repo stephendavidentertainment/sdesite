@@ -370,7 +370,10 @@ nav > div {
 }
 
 #logo {
-    // top: 5%; /* Adjust as needed */
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+    top: 5%; /* Adjust as needed */
     width: clamp(200px, 20vw, 600px); /* Maintain responsive width */
 }
 
@@ -379,21 +382,3 @@ nav > div {
 	width: clamp(360px, 60vw, 800px); /* Maintain responsive width */
 	margin-top: 20px;
 }
-
-// .stacked-divs {
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// }
-// .stacked-div {
-// 	margin: 10px 0;
-// 	padding: 20px;
-// 	border: 2px solid red;
-// 	width: 100%;
-// 	text-align: center;
-// 	img {
-// 		align-self: center;
-// 		max-width: 100%;
-// 		height: auto;
-// 	}
-// }

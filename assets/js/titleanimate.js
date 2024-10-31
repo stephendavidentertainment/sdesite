@@ -1,10 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const titlesWrapper = document.querySelector(".slider-title-wrapper");
-    const titles = titlesWrapper.querySelectorAll("h1");
-    const heroImage = document.querySelector(".hero-image img");
-    const laurelsImage = document.querySelector("#laurels");
-    let currentTitleIndex = 0;
-
     // Array of image URLs, alt texts, and laurels images corresponding to each title
     const slides = [
         {
@@ -14,24 +8,42 @@ document.addEventListener("DOMContentLoaded", () => {
             laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Wyatt_Quotes.webp"
         },
         {
+            title: "The Titans That Built America",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/Elephant-back.jpg",
+            heroAlt: "The Titans That Built America",
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Titans_Laurels.png"
+        },
+        {
             title: "The Men Who Built America",
             // heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/mwba-header.jpg",
             heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/Elephant-back.jpg",
             heroAlt: "The Men Who Built America",
             laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/MWBA_Laurels.webp"
         },
+        // {
+        //     title: "Sons of Liberty",
+        //     heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/shows/fulls/screenshots/SonsOfLiberty.webp",
+        //     heroAlt: "Sons of Liberty",
+        //     laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Sons_Quotes.webp"
+        // },
+        // {
+        //     title: "Roman Empire",
+        //     // heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/Rome_106_S6A3084-1.jpg",
+        //     heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/RomanEmpire.jpg",
+        //     heroAlt: "Roman Empire",
+        //     laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Roman_Quotes.webp"
+        // },
         {
-            title: "Sons of Liberty",
-            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/shows/fulls/screenshots/SonsOfLiberty.webp",
-            heroAlt: "Sons of Liberty",
-            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Sons_Quotes.webp"
+            title: "Sugar Town",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WorldWars2.jpg",
+            heroAlt: "Sugar Town",
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/WorldWars_Laurels.webp"
         },
         {
-            title: "Roman Empire",
-            // heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/Rome_106_S6A3084-1.jpg",
-            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/RomanEmpire.jpg",
-            heroAlt: "Roman Empire",
-            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Roman_Quotes.webp"
+            title: "Jonestown",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WorldWars2.jpg",
+            heroAlt: "Jonestown: Terror in the Jungle",
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/WorldWars_Laurels.webp"
         },
         {
             title: "The World Wars",
@@ -41,6 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
             laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/WorldWars_Laurels.webp"
         }
     ];
+    const titlesWrapper = document.querySelector(".slider-title-wrapper");
+    const titles = titlesWrapper.querySelectorAll("h1");
+    const heroImage = document.querySelector(".hero-image img");
+    const laurelsImage = document.querySelector("#laurels");
+    let currentTitleIndex = 0;
+
 
     // Initially hide all titles except the first one
     titles.forEach((title, index) => {
@@ -76,7 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Animate in the next title, hero image, and laurels image
                 nextTitle.style.display = "block";
-                gsap.fromTo([nextTitle, heroImage, laurelsImage], { opacity: 0 }, {
+                gsap.fromTo([nextTitle, laurelsImage], { opacity: 0, scale: 0.8 }, {
+                    scale: 1,
                     opacity: 1,
                     duration: 1,
                     ease: "power4.out",
@@ -85,6 +104,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         currentTitleIndex = nextTitleIndex;
                     }
                 });
+
+                gsap.fromTo(heroImage, { x: -500, opacity: 0 }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power4.out"
+                });
+
             }
         });
     }
