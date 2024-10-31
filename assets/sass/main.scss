@@ -370,9 +370,9 @@ nav > div {
 }
 
 #logo {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+	position: relative;
+	// left: 50%;
+	// transform: translateX(-50%);
     top: 5%; /* Adjust as needed */
     width: clamp(200px, 20vw, 600px); /* Maintain responsive width */
 }
