@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             title: "The Titans That Built America",
-            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/Elephant-back.jpg",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/TitansNew2.jpg",
             heroAlt: "The Titans That Built America",
             laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/Titans_Laurels.png"
         },
@@ -35,15 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
         // },
         {
             title: "Sugar Town",
-            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WorldWars2.jpg",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/sugartown.jpg",
             heroAlt: "Sugar Town",
-            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/WorldWars_Laurels.webp"
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/MWBA_Laurels.webp"
         },
         {
             title: "Jonestown",
-            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/WorldWars2.jpg",
+            heroSrc: "https://stephendavidentertainment.github.io/sdesite/images/landing/jonestown.jpg",
             heroAlt: "Jonestown: Terror in the Jungle",
-            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/WorldWars_Laurels.webp"
+            laurelsSrc: "https://stephendavidentertainment.github.io/sdesite/images/laurels/MWBA_Laurels.webp"
         },
         {
             title: "The World Wars",
